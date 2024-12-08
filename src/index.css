@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 37 99 235;
+    --color-secondary: 107 114 128;
+  }
+
+  .dark {
+    --color-primary: 59 130 246;
+    --color-secondary: 156 163 175;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200;
+  }
+
+  .mobile-nav-link {
+    @apply block py-2 text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400;
+  }
+}
+
+@keyframes fade {
+  0%, 33% { opacity: 1; }
+  50%, 83% { opacity: 0; }
+  100% { opacity: 1; }
+}
